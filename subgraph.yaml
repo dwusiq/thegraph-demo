@@ -1,0 +1,26 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: HelloWorld
+    network: kovan
+    source:
+      address: "0xBFC050DE77eCE595197a532A3E11759022b8cbEC"
+      abi: HelloWorld
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - AgeAdd
+        - ChangeUser
+      abis:
+        - name: HelloWorld
+          file: ./abis/HelloWorld.json
+      eventHandlers:
+        - event: AgeAdd(indexed address,uint256)
+          handler: handleAgeAdd
+        - event: ChangeUser(indexed address,indexed string,indexed uint256)
+          handler: handleChangeUser
+      file: ./src/mapping.ts

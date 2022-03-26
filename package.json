@@ -1,0 +1,16 @@
+{
+  "name": "thegraphdemo",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ dwusiq/thegraphdemo",
+    "create-local": "graph create --node http://localhost:8020/ dwusiq/thegraphdemo",
+    "remove-local": "graph remove --node http://localhost:8020/ dwusiq/thegraphdemo",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 dwusiq/thegraphdemo"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.28.0",
+    "@graphprotocol/graph-ts": "0.26.0"
+  }
+}
