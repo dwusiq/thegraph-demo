@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: HelloWorld
@@ -17,10 +17,10 @@ dataSources:
         - ChangeUser
       abis:
         - name: HelloWorld
-          file: ./abis/HelloWorld.json
+          file: HelloWorld\abis\HelloWorld.json
       eventHandlers:
         - event: AgeAdd(indexed address,uint256)
           handler: handleAgeAdd
         - event: ChangeUser(indexed address,indexed string,indexed uint256)
           handler: handleChangeUser
-      file: ./src/mapping.ts
+      file: HelloWorld\HelloWorld.wasm
