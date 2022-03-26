@@ -13,7 +13,7 @@ export function handleAgeAdd(event: AgeAdd): void {
   console.log("Address");
   let HelloWorld_contract = HelloWorld.bind(Address.fromString("0xBFC050DE77eCE595197a532A3E11759022b8cbEC"))
   log.info("name {}", [HelloWorld_contract.name()])
-  log.info("age {}", ["" + HelloWorld_contract.age])
+  log.info("age {}", ["" + HelloWorld_contract.age()])
 
 
   // Entities only exist after they have been saved to the store;
