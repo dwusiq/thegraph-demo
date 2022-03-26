@@ -8,6 +8,7 @@ dataSources:
     source:
       address: "0xBFC050DE77eCE595197a532A3E11759022b8cbEC"
       abi: HelloWorld
+      startBlock: 6175244
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
